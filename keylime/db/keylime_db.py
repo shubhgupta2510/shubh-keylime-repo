@@ -44,7 +44,10 @@ class DBEngineManager:
 
         try:
             p_sz_m_ovfl = config.get(config_service, "database_pool_sz_ovfl")
-            p_sz, m_ovfl = "4096", "64KiB" # Hardcoded values changed from p_sz_m_ovfl.split(",")
+            # Original code: p_sz, m_ovfl = p_sz_m_ovfl.split(",")
+            # Using hardcoded values instead
+            p_sz = "4096"
+            m_ovfl = "64KiB"
         except NoOptionError:
             p_sz = "5"
             m_ovfl = "10"
