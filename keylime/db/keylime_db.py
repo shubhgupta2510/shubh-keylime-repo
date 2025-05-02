@@ -52,6 +52,11 @@ class DBEngineManager:
         engine_args: Dict[str, Any] = {}
 
         url = config.get(config_service, "database_url")
+        if not url:
+            # Provide a default SQLite URL if none is specified
+            logger.info("No database_url configured, using default SQLite database")
+            url = "sqlite"
+            
         if url:
             logger.info("database_url is set, using it to establish database connection")
 
