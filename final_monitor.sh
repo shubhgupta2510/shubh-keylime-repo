@@ -24,7 +24,25 @@ SWTPM_ATTESTATION_LIMIT=75                           # Proactive restart before 
 
 # Logging function with timestamp
 log() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S'): $*" | tee -a "$LOGFILE"
+    local timestamp="$(date '+%Y-%m-%d %H:%M:%S')"
+    local message="$timestamp: $*"
+    
+    # Always output to console
+    echo "$message"
+    
+    # Try to write to log file, but don't fail if we can't
+    if ! echo "$message" >> "$LOGFILE" 2>/dev/null; then
+        # If we can't write to the log file, try to fix permissions or use a fallback
+        if [[ ! -w "$LOGFILE" ]] && [[ -f "$LOGFILE" ]]; then
+            # Try to fix ownership if the file exists but we can't write to it
+            sudo chown "$(whoami):$(whoami)" "$LOGFILE" 2>/dev/null || true
+            echo "$message" >> "$LOGFILE" 2>/dev/null || true
+        elif [[ ! -f "$LOGFILE" ]]; then
+            # Create the file if it doesn't exist
+            touch "$LOGFILE" 2>/dev/null || true
+            echo "$message" >> "$LOGFILE" 2>/dev/null || true
+        fi
+    fi
 }
 
 # Get agent operational status from verifier
@@ -57,22 +75,44 @@ check_containers() {
 restart_agent() {
     log "Restarting agent and re-registering..."
     
+    # Clear any TPM dictionary attack lockout first
+    log "Clearing TPM lockout state..."
+    docker exec keylime-agent bash -c "export TPM2TOOLS_TCTI=mssim:host=localhost,port=2321 && tpm2_dictionarylockout -c" >/dev/null 2>&1 || true
+    sleep 2
+    
+    # Clean slate: remove agent from verifier's records
+    docker exec keylime-verifier keylime_tenant -c delete -u "${AGENT_UUID}" >/dev/null 2>&1 || true
+    sleep 3   # Brief pause between delete and add operations
+    
     # Restart the agent container to clear any internal state issues
     docker restart keylime-agent
     sleep 15  # Allow container to fully initialize
     
-    # Clean slate: remove agent from verifier's records
-    docker exec keylime-verifier keylime_tenant -c delete -u "${AGENT_UUID}" >/dev/null 2>&1 || true
-    sleep 5   # Brief pause between delete and add operations
+    # Clear lockout again after restart
+    docker exec keylime-agent bash -c "export TPM2TOOLS_TCTI=mssim:host=localhost,port=2321 && tpm2_dictionarylockout -c" >/dev/null 2>&1 || true
+    sleep 2
     
     # Re-register agent with verifier to establish fresh attestation relationship
-    if docker exec keylime-verifier keylime_tenant -c add -t keylime-agent -u "${AGENT_UUID}" >/dev/null 2>&1; then
-        log "Agent restart successful"
-        return 0
-    else
-        log "Agent restart failed"
-        return 1
-    fi
+    local registration_attempts=0
+    local max_attempts=3
+    
+    while [[ $registration_attempts -lt $max_attempts ]]; do
+        registration_attempts=$((registration_attempts + 1))
+        log "Registration attempt $registration_attempts/$max_attempts"
+        
+        if docker exec keylime-verifier keylime_tenant -c add -t keylime-agent -u "${AGENT_UUID}" >/dev/null 2>&1; then
+            log "Agent restart successful"
+            return 0
+        else
+            log "Registration attempt $registration_attempts failed"
+            if [[ $registration_attempts -lt $max_attempts ]]; then
+                sleep 5
+            fi
+        fi
+    done
+    
+    log "Agent restart failed after $max_attempts attempts"
+    return 1
 }
 
 # Perform full system restart (all containers)
@@ -118,7 +158,7 @@ full_restart() {
 #     # Clear TPM state directory (this resets the TPM emulator)
 #     if [[ -d "/home/shubhgupta/tpm_state" ]]; then
 #         log "Clearing TPM state directory..."
-#         rm -rf /home/shubhgupta/tpm_state/*
+#         rm -rf /home/shubhgupta/tmp_state/*
 #     fi
     
 #     sleep 5
@@ -132,9 +172,31 @@ full_restart() {
     
 #     sleep 30  # Allow initialization
     
-#     # Register agent
-#     # docker exec keylime-verifier keylime_tenant -c add -t keylime-agent -u "${AGENT_UUID}" >/dev/null 2>&1 || true
-#     restart_agent  # Reuse existing function to re-register agent
+#     # Clear any TPM dictionary attack lockout before registration
+#     log "Clearing TPM lockout state..."
+#     docker exec keylime-agent bash -c "export TPM2TOOLS_TCTI=mssim:host=localhost,port=2321 && tpm2_dictionarylockout -c" >/dev/null 2>&1 || true
+#     sleep 3
+    
+#     # Register agent with enhanced error handling
+#     log "Registering agent with fresh TPM state..."
+#     local registration_attempts=0
+#     local max_attempts=3
+    
+#     while [[ $registration_attempts -lt $max_attempts ]]; do
+#         registration_attempts=$((registration_attempts + 1))
+#         log "Registration attempt $registration_attempts/$max_attempts"
+        
+#         if docker exec keylime-verifier keylime_tenant -c add -t keylime-agent -u "${AGENT_UUID}" >/dev/null 2>&1; then
+#             log "Agent registration successful"
+#             break
+#         else
+#             log "Registration attempt $registration_attempts failed"
+#             if [[ $registration_attempts -lt $max_attempts ]]; then
+#                 sleep 10
+#             fi
+#         fi
+#     done
+    
 #     sleep 5
 #     log "TPM state reset completed"
 #     show_status
