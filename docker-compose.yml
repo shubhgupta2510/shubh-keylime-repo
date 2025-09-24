@@ -121,7 +121,7 @@ services:
         
         # Check explicitly if port is open using simple nc check
         if nc -z mitm 8891; then # DO NOT CHANGE TO 8890, MITM LISTENS ON 8891
-          echo "Registrar is available at registrar:8891, starting agent..."
+          echo "Registrar is available at mitm:8891, starting agent..."
           
           # Make sure agent_data.json directory is writable by keylime user
           touch /var/lib/keylime/agent_data.json
