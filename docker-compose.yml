@@ -60,7 +60,7 @@ services:
       - ../shubh-gupta-keylime-thesis/target/debug/:/rust-keylime
       - keylime-data:/var/lib/keylime
       - ../shubh-gupta-keylime-thesis/config-override/agent.conf:/etc/keylime/agent.conf.d/override.conf
-      # - /tmp/attacker_ca/attacker_ca.crt:/var/lib/keylime/cv_ca/attacker_ca.crt:ro
+      - /tmp/attacker_ca:/etc/attacker_certs:ro   # Add this
     depends_on:
       - registrar
       - verifier
@@ -111,7 +111,7 @@ services:
         sleep 2
         
         # Wait for registrar to be available
-        echo "Waiting for registrar to be available at mitm:8890..."
+        echo "Waiting for registrar to be available at mitm:8891..."
         
         # First ensure DNS resolution works 
         until getent hosts mitm; do
@@ -120,7 +120,7 @@ services:
         done
         
         # Check explicitly if port is open using simple nc check
-        if nc -z mitm 8891; then
+        if nc -z mitm 8891; then # DO NOT CHANGE TO 8890, MITM LISTENS ON 8891
           echo "Registrar is available at registrar:8891, starting agent..."
           
           # Make sure agent_data.json directory is writable by keylime user
