@@ -1,5 +1,8 @@
 services:
   registrar:
+    build:
+      context: .
+      dockerfile: docker/release/registrar/Dockerfile
     image: keylime_registrar:latest
     container_name: keylime-registrar  # Match expected hostname
     hostname: keylime-registrar        # Add explicit hostname
@@ -31,6 +34,9 @@ services:
     command: ["/mitm_entrypoint.sh"]
 
   verifier:
+    build:
+      context: .
+      dockerfile: docker/release/verifier/Dockerfile
     image: keylime_verifier:latest
     container_name: keylime-verifier  # Match expected hostname
     hostname: keylime-verifier        # Add explicit hostname
@@ -60,6 +66,7 @@ services:
       - ../shubh-gupta-keylime-thesis/target/debug/:/rust-keylime
       - keylime-data:/var/lib/keylime
       - ../shubh-gupta-keylime-thesis/config-override/agent.conf:/etc/keylime/agent.conf.d/override.conf
+      - swtpm-state:/swtpm-state # NEW
       - /tmp/attacker_ca:/etc/attacker_certs:ro   # Add this
     depends_on:
       - registrar
@@ -138,6 +145,9 @@ services:
   # Tenant is more of a client than a continuously running service
   # It's included here for completeness but typically runs on-demand
   tenant:
+    build:
+      context: .
+      dockerfile: docker/release/tenant/Dockerfile
     image: keylime_tenant:latest
     container_name: keylime-tenant
     # Command can be customized when running tenant commands
@@ -153,4 +163,6 @@ services:
 
 volumes:
   keylime-data:
+    driver: local
+  swtpm-state:
     driver: local
