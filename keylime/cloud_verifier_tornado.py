@@ -1502,7 +1502,7 @@ async def invoke_get_quote(
 
     res = tornado_requests.request(
         "GET",
-        f"http://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/quotes/integrity"
+        f"https://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/quotes/integrity"
         f"?nonce={params['nonce']}&mask={params['mask']}"
         f"&partial={partial_req}&ima_ml_entry={params['ima_ml_entry']}",
         **kwargs,
@@ -1604,7 +1604,7 @@ async def invoke_provide_v(agent: Dict[str, Any], timeout: float = 60.0) -> None
 
     res = tornado_requests.request(
         "POST",
-        f"http://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/keys/vkey",
+        f"https://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/keys/vkey",
         data=v_json_message,
         **kwargs,
         timeout=timeout,
@@ -1665,7 +1665,7 @@ async def invoke_notify_error(agent: Dict[str, Any], tosend: Dict[str, Any], tim
 
     res = tornado_requests.request(
         "POST",
-        f"http://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/notifications/revocation",
+        f"https://{agent['ip']}:{agent['port']}/v{agent['supported_version']}/notifications/revocation",
         **kwargs,  # type: ignore
         timeout=timeout,
     )
