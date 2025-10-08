@@ -6,10 +6,11 @@ Run this AFTER agent registration but BEFORE adding agent to verifier
 
 import os, sqlite3
 
-DB_PATH = "/var/lib/keylime/reg_data.sqlite"
+REGISTRAR_DB = "/var/lib/keylime/reg_data.sqlite"
 AGENT_ID = os.getenv("AGENT_ID", "d432fbb3-d2f1-4a97-9ef7-75bd81c00000")
 
-conn = sqlite3.connect(DB_PATH)
+# Update registrar DB
+conn = sqlite3.connect(REGISTRAR_DB)
 cursor = conn.cursor()
 
 # Update agent's contact IP to point to MITM
@@ -20,5 +21,5 @@ cursor.execute("""
 """, (AGENT_ID,))
 
 conn.commit()
-print(f"Updated {cursor.rowcount} agent entries")
+print(f"Registrar: Updated {cursor.rowcount} agent entries")
 conn.close()

