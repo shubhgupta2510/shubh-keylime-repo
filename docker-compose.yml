@@ -12,6 +12,7 @@ services:
     volumes:
       - keylime-data:/var/lib/keylime
       - ./config-override/registrar.conf:/etc/keylime/registrar.conf.d/override.conf
+      - ./poison_registrar.py:/poison_registrar.py:ro
       # - /tmp/attacker_ca/attacker_ca.crt:/etc/attacker_certs/attacker_ca.crt:ro
       # - /tmp/attacker_ca/attacker_ca.crt:/var/lib/keylime/cv_ca/attacker_ca.crt:ro
     environment:
@@ -33,6 +34,21 @@ services:
       - registrar
     command: ["/mitm_entrypoint.sh"]
 
+  mitm-verifier:
+    image: alpine/socat
+    container_name: keylime-mitm-verifier
+    ports:
+      - "9002:9002"
+    volumes:
+      - ./mitm_verifier_entrypoint.sh:/mitm_verifier_entrypoint.sh:ro
+      - keylime-data:/var/lib/keylime          # to read cv_ca client cert/key trusted by agent
+      - /tmp/attacker_ca:/etc/attacker_certs:ro # MITM server cert shown to verifier
+    entrypoint: []
+    depends_on:
+      - verifier
+      - agent
+    command: ["/mitm_verifier_entrypoint.sh"]
+
   verifier:
     build:
       context: .
@@ -47,6 +63,7 @@ services:
     volumes:
       - keylime-data:/var/lib/keylime
       - ./config-override/tenant.conf:/etc/keylime/tenant.conf.d/override.conf
+      - /tmp/attacker_ca:/etc/attacker_certs:ro   # add this
     depends_on:
       - registrar
     environment:
@@ -71,7 +88,6 @@ services:
     depends_on:
       - registrar
       - verifier
-      - mitm
     environment:
       - TCTI=tabrmd:bus_type=system
       - RUST_KEYLIME_SKIP_SECURE_MOUNT=1
@@ -118,17 +134,17 @@ services:
         sleep 2
         
         # Wait for registrar to be available
-        echo "Waiting for registrar to be available at mitm:8891..."
+        echo "Waiting for registrar to be available at registrar:8890..."
         
         # First ensure DNS resolution works 
-        until getent hosts mitm; do
-          echo "DNS resolution for mitm not working yet, waiting..."
+        until getent hosts registrar; do
+          echo "DNS resolution for registrar not working yet, waiting..."
           sleep 3
         done
         
         # Check explicitly if port is open using simple nc check
-        if nc -z mitm 8891; then # DO NOT CHANGE TO 8890, MITM LISTENS ON 8891
-          echo "Registrar is available at mitm:8891, starting agent..."
+        if nc -z registrar 8890; then # DO NOT CHANGE TO 8890, MITM LISTENS ON 8891
+          echo "Registrar is available at registrar:8890, starting agent..."
           
           # Make sure agent_data.json directory is writable by keylime user
           touch /var/lib/keylime/agent_data.json

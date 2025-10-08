@@ -19,5 +19,5 @@ echo "Starting socat proxy..."
 # Use OPENSSL if you want to do TLS on both sides - Won't work as listener accepts the connection 
 # and presents its fake mitm_server.crt but we're checking if the cert is authentic on the client side
 exec socat -d -d -v \
-  OPENSSL-LISTEN:8891,fork,reuseaddr,cert=/etc/attacker_certs/mitm_server.crt,key=/etc/attacker_certs/mitm_server.key,verify=0 \
-  OPENSSL:keylime-registrar:8891,cert=/etc/attacker_certs/mitm_client.crt,key=/etc/attacker_certs/mitm_client.key,verify=0
+  TCP-LISTEN:8891,fork,reuseaddr \
+  TCP:keylime-registrar:8890
