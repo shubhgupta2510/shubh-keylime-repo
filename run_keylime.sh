@@ -43,14 +43,57 @@ echo "Waiting 30 seconds for next attestation cycle..."
 sleep 30
 echo "\n\n"
 
-# STEP 9: Monitor MITM traffic
-echo "Monitoring MITM proxy for intercepted traffic..."
-docker logs keylime-mitm-verifier | tail -50
-echo "\n\n"
+# # STEP 9: Monitor MITM traffic
+# echo "Monitoring MITM proxy for intercepted traffic..."
+# docker logs keylime-mitm-verifier | tail -50
+# echo "\n\n"
 
-# STEP 10: Check agent status
-echo "Checking agent status..."
+# # STEP 10: Check agent status
+# echo "Checking agent status..."
+# docker exec -it keylime-verifier keylime_tenant -c status -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+# echo "\n\n"
+
+# # STEP 11: Restart verifier and view the logs for the Keylime verifier to see if attestation failed due to signature verification
+# echo "Restarting verifier to trigger fresh attestation cycle..."
+# docker restart keylime-verifier
+# sleep 10
+
+# STEP 9: Force verifier to re-read poisoned DB and attempt attestation
+echo "Restarting verifier to load poisoned DB..."
+docker restart keylime-verifier
+sleep 15
+
+# STEP 10: Check MITM proxy for intercepted traffic
+echo "Monitoring MITM proxy logs..."
+docker logs keylime-mitm-verifier | tail -100
+
+# STEP 11: Check verifier logs for signature failures
+echo "Checking verifier logs for cryptographic errors..."
+docker logs keylime-verifier | grep -E "(quote|validation|signature|Invalid|failed|ERROR|mitm)" | tail -30
+
+# STEP 12: Delete and re-add agent to force attestation through MITM
+echo "Forcing fresh attestation through MITM proxy...\n\n\n\n\n\n"
 docker exec -it keylime-verifier keylime_tenant -c status -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+echo "\n\n\n\n\n\n\n\n\n\n"
+docker exec -it keylime-verifier keylime_tenant -c delete -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000 || true
+echo "\n\n\n\n\n\n\n\n\n\n"
+sleep 2
+docker exec -it keylime-verifier keylime_tenant -c add -t keylime-agent -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+
+# STEP 13: Monitor for signature verification failures
+echo "\n\nWaiting for attestation attempt..."
+sleep 15
+
+echo "Checking for cryptographic validation errors..."
+docker logs keylime-verifier | grep -E "(quote|validation|signature|Invalid|failed|ERROR)" | tail -20
+
+docker exec -it keylime-verifier keylime_tenant -c status -u d432fbb3-d2f1-4a97-9ef7-75bd81c00000
+
+# STEP 11: Restart verifier and view the logs for the Keylime verifier to see if attestation failed due to signature verification
+# echo "Viewing logs for the Keylime verifier..."
+# docker restart keylime-verifier
+# sleep 10
+# docker logs -f keylime-verifier
 
 # # STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
 # # STEP 7: Add agent to verifier (triggers runtime attestation through MITM)
