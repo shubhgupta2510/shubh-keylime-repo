@@ -7,7 +7,7 @@ echo "Current directory: $(pwd)\n"
 
 # STEP 2: Go to the keylime-attack-2 branch in the repo
 echo "Switching to keylime-attack-2 branch..."
-git checkout keylime-attack-2
+#git checkout keylime-attack-2
 echo "Switched to branch: $(git branch --show-current)\n\n"
 
 # STEP 3: Stop and remove existing containers
