@@ -1,0 +1,74 @@
+2025-08-05 10:56:13: Starting Keylime attestation monitoring...
+2025-08-05 10:56:15: Status: Terminated, Attestations: 70
+2025-08-05 10:56:15: ❌ Unhealthy state: Terminated
+2025-08-05 10:56:15: Health issue detected (failure #1)
+2025-08-05 10:56:15: Attempting agent restart...
+2025-08-05 10:56:15: Restarting agent and re-registering...
+2025-08-05 10:56:38: Agent restart failed
+2025-08-05 10:56:42: Status: Registered, Attestations: 
+2025-08-05 10:56:42: ⚠️  Registered but no attestations yet
+2025-08-05 10:56:42: Health issue detected (failure #2)
+2025-08-05 10:56:42: Attempting agent restart...
+2025-08-05 10:56:42: Restarting agent and re-registering...
+2025-08-05 11:01:14: Starting Keylime attestation monitoring...
+2025-08-05 11:01:16: Status: Registered, Attestations: 
+2025-08-05 11:01:16: ⚠️  Registered but no attestations yet
+2025-08-05 11:01:16: Health issue detected (failure #1)
+2025-08-05 11:01:16: Attempting agent restart...
+2025-08-05 11:01:16: Restarting agent and re-registering...
+2025-08-05 11:01:39: Agent restart failed
+2025-08-05 11:01:43: Status: Registered, Attestations: 
+2025-08-05 11:01:43: ⚠️  Registered but no attestations yet
+2025-08-05 11:01:43: Health issue detected (failure #2)
+2025-08-05 11:01:43: Attempting agent restart...
+2025-08-05 11:01:43: Restarting agent and re-registering...
+2025-08-05 12:17:04: Starting Keylime attestation monitoring...
+2025-08-05 12:17:06: Status: Get Quote, Attestations: 80
+2025-08-05 12:17:06: ✅ Healthy - attestations progressing (80 total)
+2025-08-05 12:17:10: Status: Get Quote, Attestations: 80
+2025-08-05 12:18:09: Performing full system restart...
+2025-08-05 12:18:32: Performing full system restart...
+2025-08-05 12:19:21: Full restart completed
+2025-08-05 12:19:21: Starting Keylime attestation monitoring...
+2025-08-05 12:19:23: Status: Invalid Quote, Attestations: 80
+2025-08-05 12:19:23: ❌ Unhealthy state: Invalid Quote
+2025-08-05 12:19:23: Health issue detected (failure #1)
+2025-08-05 12:19:23: Attempting agent restart...
+2025-08-05 12:19:23: Restarting agent and re-registering...
+2025-08-05 12:19:46: Agent restart successful
+2025-08-05 12:19:50: Status: Get Quote, Attestations: 2
+2025-08-05 12:19:50: ✅ Healthy - attestations progressing (2 total)
+2025-08-05 12:19:54: Status: Get Quote, Attestations: 4
+2025-08-05 12:19:54: ✅ Healthy - attestations progressing (4 total)
+2025-08-05 12:19:58: Status: Get Quote, Attestations: 6
+2025-08-05 12:19:58: ✅ Healthy - attestations progressing (6 total)
+2025-08-05 12:20:02: Status: Get Quote, Attestations: 8
+2025-08-05 12:20:02: ✅ Healthy - attestations progressing (8 total)
+2025-08-05 12:20:06: Status: Get Quote, Attestations: 10
+2025-08-05 12:20:06: ✅ Healthy - attestations progressing (10 total)
+2025-08-05 12:20:10: Status: Get Quote, Attestations: 12
+2025-08-05 12:20:10: ✅ Healthy - attestations progressing (12 total)
+2025-08-05 12:20:14: Status: Get Quote, Attestations: 14
+2025-08-05 12:20:14: ✅ Healthy - attestations progressing (14 total)
+2025-08-05 12:20:18: Status: Get Quote, Attestations: 16
+2025-08-05 12:20:18: ✅ Healthy - attestations progressing (16 total)
+2025-08-05 12:20:22: Status: Get Quote, Attestations: 18
+2025-08-05 12:20:22: ✅ Healthy - attestations progressing (18 total)
+2025-08-05 12:20:26: Status: Get Quote, Attestations: 20
+2025-08-05 12:20:26: ✅ Healthy - attestations progressing (20 total)
+2025-08-05 12:20:30: Status: Get Quote, Attestations: 22
+2025-08-05 12:20:30: ✅ Healthy - attestations progressing (22 total)
+2025-08-05 12:20:34: Status: Get Quote, Attestations: 24
+2025-08-05 12:20:34: ✅ Healthy - attestations progressing (24 total)
+2025-08-05 12:20:38: Status: Get Quote, Attestations: 26
+2025-08-05 12:20:38: ✅ Healthy - attestations progressing (26 total)
+2025-08-05 12:20:42: Status: Get Quote, Attestations: 27
+2025-08-05 12:20:42: ✅ Healthy - attestations progressing (27 total)
+2025-08-05 12:20:46: Status: Get Quote, Attestations: 29
+2025-08-05 12:20:46: ✅ Healthy - attestations progressing (29 total)
+2025-08-05 12:20:50: Status: Get Quote, Attestations: 31
+2025-08-05 12:20:50: ✅ Healthy - attestations progressing (31 total)
+2025-08-05 12:20:55: Status: Get Quote, Attestations: 33
+2025-08-05 12:20:55: ✅ Healthy - attestations progressing (33 total)
+2025-08-05 12:20:59: Status: Get Quote, Attestations: 35
+2025-08-05 12:20:59: ✅ Healthy - attestations progressing (35 total)

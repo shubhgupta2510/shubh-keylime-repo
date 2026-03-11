@@ -1,19 +1,61 @@
 services:
   registrar:
+    build:
+      context: .
+      dockerfile: docker/release/registrar/Dockerfile
     image: keylime_registrar:latest
-    container_name: keylime-registrar
+    container_name: keylime-registrar  # Match expected hostname
+    hostname: keylime-registrar        # Add explicit hostname
     restart: unless-stopped
     ports:
       - "8890:8890"
-      - "8891:8891"
     volumes:
       - keylime-data:/var/lib/keylime
+      - ./config-override/registrar.conf:/etc/keylime/registrar.conf.d/override.conf
+      - ./poison_registrar.py:/poison_registrar.py:ro
+      # - /tmp/attacker_ca/attacker_ca.crt:/etc/attacker_certs/attacker_ca.crt:ro
+      # - /tmp/attacker_ca/attacker_ca.crt:/var/lib/keylime/cv_ca/attacker_ca.crt:ro
     environment:
       - KEYLIME_REGISTRAR_IP=0.0.0.0
+      - KEYLIME_REGISTRAR_PORT=8890
+      - KEYLIME_REGISTRAR_TLS_ENABLED=false
+
+
+  mitm:
+    image: alpine/socat
+    container_name: keylime-mitm
+    ports:
+      - "8891:8890"  # Expose port for agent to connect to
+    volumes:
+      - /tmp/attacker_ca:/etc/attacker_certs:ro
+      - ./mitm_entrypoint.sh:/mitm_entrypoint.sh:ro
+    entrypoint: []
+    depends_on:
+      - registrar
+    command: ["/mitm_entrypoint.sh"]
+
+  mitm-verifier:
+    image: alpine/socat
+    container_name: keylime-mitm-verifier
+    ports:
+      - "9002:9002"
+    volumes:
+      - ./mitm_verifier_entrypoint.sh:/mitm_verifier_entrypoint.sh:ro
+      - keylime-data:/var/lib/keylime          # to read cv_ca client cert/key trusted by agent
+      - /tmp/attacker_ca:/etc/attacker_certs:ro # MITM server cert shown to verifier
+    entrypoint: []
+    depends_on:
+      - verifier
+      - agent
+    command: ["/mitm_verifier_entrypoint.sh"]
 
   verifier:
+    build:
+      context: .
+      dockerfile: docker/release/verifier/Dockerfile
     image: keylime_verifier:latest
-    container_name: keylime-verifier
+    container_name: keylime-verifier  # Match expected hostname
+    hostname: keylime-verifier        # Add explicit hostname
     restart: unless-stopped
     ports:
       - "8880:8880"
@@ -21,6 +63,7 @@ services:
     volumes:
       - keylime-data:/var/lib/keylime
       - ./config-override/tenant.conf:/etc/keylime/tenant.conf.d/override.conf
+      - /tmp/attacker_ca:/etc/attacker_certs:ro   # add this
     depends_on:
       - registrar
     environment:
@@ -40,6 +83,8 @@ services:
       - ../shubh-gupta-keylime-thesis/target/debug/:/rust-keylime
       - keylime-data:/var/lib/keylime
       - ../shubh-gupta-keylime-thesis/config-override/agent.conf:/etc/keylime/agent.conf.d/override.conf
+      - swtpm-state:/swtpm-state # NEW
+      - /tmp/attacker_ca:/etc/attacker_certs:ro   # Add this
     depends_on:
       - registrar
       - verifier
@@ -48,8 +93,8 @@ services:
       - RUST_KEYLIME_SKIP_SECURE_MOUNT=1
       - RUST_BACKTRACE=1
       - RUST_LOG=keylime_agent=debug,keylime=debug
-      - KEYLIME_AGENT_REGISTRAR_IP=registrar
-      - KEYLIME_AGENT_REGISTRAR_PORT=8890
+      # - KEYLIME_AGENT_REGISTRAR_IP=registrar
+      # - KEYLIME_AGENT_REGISTRAR_PORT=8890
     command:
       - /bin/bash
       - -c
@@ -89,7 +134,7 @@ services:
         sleep 2
         
         # Wait for registrar to be available
-        echo "Waiting for registrar to be available at registrar:8891..."
+        echo "Waiting for registrar to be available at registrar:8890..."
         
         # First ensure DNS resolution works 
         until getent hosts registrar; do
@@ -98,8 +143,8 @@ services:
         done
         
         # Check explicitly if port is open using simple nc check
-        if nc -z registrar 8891; then
-          echo "Registrar is available at registrar:8891, starting agent..."
+        if nc -z registrar 8890; then # DO NOT CHANGE TO 8890, MITM LISTENS ON 8891
+          echo "Registrar is available at registrar:8890, starting agent..."
           
           # Make sure agent_data.json directory is writable by keylime user
           touch /var/lib/keylime/agent_data.json
@@ -116,6 +161,9 @@ services:
   # Tenant is more of a client than a continuously running service
   # It's included here for completeness but typically runs on-demand
   tenant:
+    build:
+      context: .
+      dockerfile: docker/release/tenant/Dockerfile
     image: keylime_tenant:latest
     container_name: keylime-tenant
     # Command can be customized when running tenant commands
@@ -131,4 +179,6 @@ services:
 
 volumes:
   keylime-data:
+    driver: local
+  swtpm-state:
     driver: local

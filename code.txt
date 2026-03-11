@@ -1,0 +1,990 @@
+.:
+total 4760
+-rw-rw-r--  1 shubhgupta shubhgupta   10376 Sep 23 11:15 agent_registrar.pcap
+-rw-rw-r--  1 shubhgupta shubhgupta     509 Aug  4 17:03 codecov.yml
+-rw-rw-r--  1 shubhgupta shubhgupta    3211 Aug  4 17:03 CODE_OF_CONDUCT.md
+-rw-rw-r--  1 shubhgupta shubhgupta       0 Oct  2 14:33 code.txt
+drwxrwxr-x  2 shubhgupta shubhgupta    4096 Sep 25 13:01 config-override
+-rw-rw-r--  1 shubhgupta shubhgupta    5005 Aug  4 17:03 CONTRIBUTING.md
+drwxrwxr-x  5 shubhgupta shubhgupta    4096 Aug  4 17:03 demo
+-rw-rw-r--  1 shubhgupta shubhgupta      93 Aug  4 17:03 DESCRIPTION.md
+drwxrwxr-x  4 shubhgupta shubhgupta    4096 Aug  4 17:03 docker
+-rw-rw-r--  1 shubhgupta shubhgupta    5521 Sep 25 14:45 docker-compose.yml
+drwxrwxr-x  7 shubhgupta shubhgupta    4096 Aug  4 17:03 docs
+-rwxrwxr-x  1 shubhgupta shubhgupta   14148 Sep 23 11:15 final_monitor.sh
+-rw-rw-r--  1 shubhgupta shubhgupta    6259 Aug  4 17:03 GOVERNANCE.md
+-rwxrwxr-x  1 shubhgupta shubhgupta   18112 Aug  4 17:03 installer.sh
+drwxrwxr-x 15 shubhgupta shubhgupta    4096 Aug  4 17:03 keylime
+-rw-rw-r--  1 shubhgupta shubhgupta   14600 Aug  4 17:03 keylime-agent.conf
+-rw-rw-r--  1 shubhgupta shubhgupta  910220 Sep 23 11:15 keylime_comms.pcap
+drwxrwxr-x  2 shubhgupta shubhgupta    4096 Aug  4 17:03 Keylime Info
+-rw-rw-r--  1 shubhgupta shubhgupta       0 Aug  4 17:03 keylime_monitor.log
+-rwxrwxr-x  1 shubhgupta shubhgupta    9710 Aug  4 17:03 keylime_monitor.sh
+-rw-rw-r--  1 shubhgupta shubhgupta   11358 Aug  4 17:03 LICENSE
+-rw-rw-r--  1 shubhgupta shubhgupta     120 Aug  4 17:03 MAINTAINERS.md
+-rw-rw-r--  1 shubhgupta shubhgupta     138 Aug  4 17:03 Makefile
+-rw-rw-r--  1 shubhgupta shubhgupta      82 Aug  4 17:03 MANIFEST.in
+drwxrwxr-x  3 shubhgupta shubhgupta    4096 Aug  4 17:03 media
+-rwxrwxr-x  1 shubhgupta shubhgupta     461 Sep 25 12:45 mitm_agent_entrypoint.sh
+-rwxrwxr-x  1 shubhgupta shubhgupta     917 Sep 25 14:53 mitm_entrypoint.sh
+-rw-------  1 shubhgupta shubhgupta   97384 Sep 24 10:00 mitm_error.pcap
+-rw-------  1 shubhgupta shubhgupta  997632 Sep 24 11:00 mitm_full_new.pcap
+-rw-rw-r--  1 shubhgupta shubhgupta   60292 Sep 23 11:16 mitm_full.pcap
+-rw-rw-r--  1 shubhgupta shubhgupta  216928 Sep 23 11:15 mitm_full_v2.pcap
+-rw-rw-r--  1 shubhgupta shubhgupta  185516 Sep 23 11:15 mitm.pcap
+-rw-rw-r--  1 shubhgupta shubhgupta    8453 Aug  4 17:03 MONITOR_DOCUMENTATION.md
+-rw-rw-r--  1 shubhgupta shubhgupta 1065351 Sep 23 11:15 monitor.log
+-rw-rw-r--  1 shubhgupta shubhgupta    4434 Sep 23 11:15 monitor.log.backup.20250805_122255
+-rw-rw-r--  1 shubhgupta shubhgupta  932161 Sep 23 11:15 monitor.log.backup.20250808_102846
+-rw-rw-r--  1 shubhgupta shubhgupta   32615 Sep 23 11:15 monitor.log.backup.20250808_105610
+-rw-rw-r--  1 shubhgupta shubhgupta    2384 Aug  4 17:03 MONITOR_README.md
+-rwxrwxr-x  1 shubhgupta shubhgupta     361 Aug  4 17:03 monitor.sh
+-rw-rw-r--  1 shubhgupta shubhgupta    1722 Aug  4 17:03 mypy.ini
+-rw-rw-r--  1 shubhgupta shubhgupta    4952 Aug  4 17:03 packit-ci.fmf
+-rw-rw-r--  1 shubhgupta shubhgupta    5058 Sep 23 11:15 payloads.txt
+-rw-rw-r--  1 shubhgupta shubhgupta     394 Aug  4 17:03 pylintrc
+-rw-rw-r--  1 shubhgupta shubhgupta      91 Aug  4 17:03 _pypi-notice.md
+-rw-rw-r--  1 shubhgupta shubhgupta     680 Aug  4 17:03 pyproject.toml
+-rw-rw-r--  1 shubhgupta shubhgupta   11291 Aug  4 17:03 README.md
+-rw-rw-r--  1 shubhgupta shubhgupta    1264 Aug  4 17:03 RELEASE.md
+-rw-rw-r--  1 shubhgupta shubhgupta    1282 Aug  4 17:03 requirements.txt
+-rw-rw-r--  1 shubhgupta shubhgupta    3508 Aug  4 17:03 ROADMAP.md
+-rwxrwxr-x  1 shubhgupta shubhgupta    1812 Sep 26 14:26 run_keylime.sh
+drwxrwxr-x  3 shubhgupta shubhgupta    4096 Aug  4 17:03 scripts
+drwxrwxr-x  2 shubhgupta shubhgupta    4096 Aug  4 17:03 services
+-rw-rw-r--  1 shubhgupta shubhgupta    2271 Aug  4 17:03 setup.cfg
+-rw-rw-r--  1 shubhgupta shubhgupta    1105 Aug  4 17:03 setup.py
+-rwxrwxr-x  1 shubhgupta shubhgupta    5630 Aug  4 17:03 simple_monitor.sh
+-rw-rw-r--  1 shubhgupta shubhgupta    4045 Aug  4 17:03 SWTPM_80_ATTESTATION_FIX.md
+drwxrwxr-x  7 shubhgupta shubhgupta    4096 Aug  4 17:03 templates
+drwxrwxr-x  3 shubhgupta shubhgupta    4096 Aug  4 17:03 test
+drwxrwxr-x  3 shubhgupta shubhgupta    4096 Aug  4 17:03 test-data
+-rwxrwxr-x  1 shubhgupta shubhgupta     749 Aug  4 17:03 test_functions.sh
+-rw-rw-r--  1 shubhgupta shubhgupta   19711 Aug  4 17:03 TESTING.md
+-rwxrwxr-x  1 shubhgupta shubhgupta     925 Aug  4 17:03 test_monitor.sh
+-rw-rw-r--  1 shubhgupta shubhgupta     175 Aug  4 17:03 test-requirements.txt
+-rw-rw-r--  1 shubhgupta shubhgupta    2116 Aug  4 17:03 test_tenant_connection.py
+-rw-rw-r--  1 shubhgupta shubhgupta     970 Aug  4 17:03 tox.ini
+drwxrwxr-x  2 shubhgupta shubhgupta    4096 Aug  4 17:03 tpm_cert_store
+-rwxrwxr-x  1 shubhgupta shubhgupta    3522 Aug  4 17:03 upgrade_swtpm.sh
+-rwxrwxr-x  1 shubhgupta shubhgupta    2834 Aug  4 17:03 verify_port_fix.sh
+
+./config-override:
+total 20
+-rw-rw-r-- 1 shubhgupta shubhgupta 544 Sep 25 13:01 python-agent.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta 420 Sep 25 10:10 registrar.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta 305 Sep 25 12:39 tenant-attack.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta 679 Sep 24 10:48 tenant.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta 198 Sep 23 11:15 verifier.conf
+
+./demo:
+total 2468
+drwxrwxr-x 2 shubhgupta shubhgupta    4096 Aug  4 17:03 agent_monitor
+-rwxrwxr-x 1 shubhgupta shubhgupta     865 Aug  4 17:03 autorun.sh
+-rwxrwxr-x 1 shubhgupta shubhgupta    8752 Aug  4 17:03 demo_setup.sh
+drwxrwxr-x 2 shubhgupta shubhgupta    4096 Aug  4 17:03 ima-policies
+-rw-rw-r-- 1 shubhgupta shubhgupta     393 Aug  4 17:03 ima-policy
+-rw-rw-r-- 1 shubhgupta shubhgupta     135 Aug  4 17:03 keyfile.txt
+drwxrwxr-x 2 shubhgupta shubhgupta    4096 Aug  4 17:03 payload
+-rwxrwxr-x 1 shubhgupta shubhgupta 5242880 Aug  4 17:03 payload.enc
+-rw-rw-r-- 1 shubhgupta shubhgupta      64 Aug  4 17:03 payload.txt
+-rw-rw-r-- 1 shubhgupta shubhgupta    4827 Aug  4 17:03 README.md
+
+./demo/agent_monitor:
+total 24
+-rwxrwxr-x 1 shubhgupta shubhgupta   540 Aug  4 17:03 autorun.sh
+-rw-rw-r-- 1 shubhgupta shubhgupta  3572 Aug  4 17:03 README.md
+-rwxrwxr-x 1 shubhgupta shubhgupta 10030 Aug  4 17:03 tenant_agent_monitor.py
+-rwxrwxr-x 1 shubhgupta shubhgupta   309 Aug  4 17:03 tenant_agent_monitor.sh
+
+./demo/ima-policies:
+total 16
+-rwxrwxr-x 1 shubhgupta shubhgupta 1023 Aug  4 17:03 ima-policy-default
+-rwxrwxr-x 1 shubhgupta shubhgupta  740 Aug  4 17:03 ima-policy-keylime
+-rwxrwxr-x 1 shubhgupta shubhgupta  793 Aug  4 17:03 ima-policy-keylime-etc
+-rw-rw-r-- 1 shubhgupta shubhgupta  480 Aug  4 17:03 README.md
+
+./demo/payload:
+total 360
+-rwxrwxr-x 1 shubhgupta shubhgupta    580 Aug  4 17:03 index.html
+-rw-rw-r-- 1 shubhgupta shubhgupta 361358 Aug  4 17:03 vault.jpg
+
+./docker:
+total 8
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 ci
+drwxrwxr-x 7 shubhgupta shubhgupta 4096 Aug  4 17:03 release
+
+./docker/ci:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta  441 Aug  4 17:03 dbus-policy.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta 1771 Aug  4 17:03 Dockerfile
+
+./docker/release:
+total 28
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 agent
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 base
+-rwxrwxr-x 1 shubhgupta shubhgupta 1662 Aug  4 17:03 build_locally.sh
+-rwxrwxr-x 1 shubhgupta shubhgupta  668 Aug  4 17:03 generate-files.sh
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Sep 25 11:34 registrar
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Sep 25 11:34 tenant
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Sep 25 11:34 verifier
+
+./docker/release/agent:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 1110 Aug  4 17:03 Dockerfile.in
+
+./docker/release/base:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 712 Aug  4 17:03 Dockerfile.in
+
+./docker/release/registrar:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 336 Sep 25 11:34 Dockerfile
+-rw-rw-r-- 1 shubhgupta shubhgupta 339 Aug  4 17:03 Dockerfile.in
+
+./docker/release/tenant:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 954 Sep 25 11:34 Dockerfile
+-rw-rw-r-- 1 shubhgupta shubhgupta 957 Aug  4 17:03 Dockerfile.in
+
+./docker/release/verifier:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 334 Sep 25 11:34 Dockerfile
+-rw-rw-r-- 1 shubhgupta shubhgupta 337 Aug  4 17:03 Dockerfile.in
+
+./docs:
+total 152
+-rw-rw-r-- 1 shubhgupta shubhgupta    28 Aug  4 17:03 _config.yml
+-rw-rw-r-- 1 shubhgupta shubhgupta  5815 Aug  4 17:03 conf.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 design
+-rw-rw-r-- 1 shubhgupta shubhgupta   160 Aug  4 17:03 design.rst
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 developers
+-rw-rw-r-- 1 shubhgupta shubhgupta   177 Aug  4 17:03 developers.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  1184 Aug  4 17:03 index.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  7719 Aug  4 17:03 installation.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 38756 Aug  4 17:03 keylime.png
+-rw-rw-r-- 1 shubhgupta shubhgupta   581 Aug  4 17:03 Makefile
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 old
+-rw-rw-r-- 1 shubhgupta shubhgupta 21837 Aug  4 17:03 publications.bib
+-rw-rw-r-- 1 shubhgupta shubhgupta   812 Aug  4 17:03 publications.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta   418 Aug  4 17:03 README.md
+-rw-rw-r-- 1 shubhgupta shubhgupta   182 Aug  4 17:03 requirements.txt
+drwxrwxr-x 5 shubhgupta shubhgupta  4096 Aug  4 17:03 rest_apis
+-rw-rw-r-- 1 shubhgupta shubhgupta  2436 Aug  4 17:03 rest_apis.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta   466 Aug  4 17:03 security.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta   732 Aug  4 17:03 setup.cfg
+-rw-rw-r-- 1 shubhgupta shubhgupta    70 Aug  4 17:03 setup.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 user_guide
+-rw-rw-r-- 1 shubhgupta shubhgupta   393 Aug  4 17:03 user_guide.rst
+
+./docs/design:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta 4376 Aug  4 17:03 overview.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 4027 Aug  4 17:03 threat_model.rst
+
+./docs/developers:
+total 20
+-rw-rw-r-- 1 shubhgupta shubhgupta 12127 Aug  4 17:03 config_update.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  4867 Aug  4 17:03 contributing.rst
+
+./docs/old:
+total 6456
+-rw-rw-r-- 1 shubhgupta shubhgupta    2576 Aug  4 17:03 freebsd.md
+-rw-rw-r-- 1 shubhgupta shubhgupta  302382 Aug  4 17:03 hotcloud18.pdf
+-rw-rw-r-- 1 shubhgupta shubhgupta 1707052 Aug  4 17:03 keylime-detailed-architecture-v7.pptx
+-rw-rw-r-- 1 shubhgupta shubhgupta 1165946 Aug  4 17:03 keylime-elevator-slides.pptx
+-rw-rw-r-- 1 shubhgupta shubhgupta   17590 Aug  4 17:03 keylime.png
+-rwxrwxr-x 1 shubhgupta shubhgupta   48389 Aug  4 17:03 keylime RESTful API.docx
+-rw-rw-r-- 1 shubhgupta shubhgupta 2857490 Aug  4 17:03 llsrc-keylime-acsac-v6.pptx
+-rw-rw-r-- 1 shubhgupta shubhgupta  496138 Aug  4 17:03 tci-acm.pdf
+
+./docs/rest_apis:
+total 12
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2_1
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2_2
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2_3
+
+./docs/rest_apis/2_1:
+total 44
+-rw-rw-r-- 1 shubhgupta shubhgupta   207 Aug  4 17:03 2_1.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 10813 Aug  4 17:03 agent.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  8485 Aug  4 17:03 registrar.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 14988 Aug  4 17:03 verifier.rst
+
+./docs/rest_apis/2_2:
+total 44
+-rw-rw-r-- 1 shubhgupta shubhgupta   208 Aug  4 17:03 2_2.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 11802 Aug  4 17:03 agent.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  8618 Aug  4 17:03 registrar.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 16032 Aug  4 17:03 verifier.rst
+
+./docs/rest_apis/2_3:
+total 44
+-rw-rw-r-- 1 shubhgupta shubhgupta   208 Aug  4 17:03 2_3.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 11803 Aug  4 17:03 agent.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  9425 Aug  4 17:03 registrar.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 16123 Aug  4 17:03 verifier.rst
+
+./docs/user_guide:
+total 100
+-rw-rw-r-- 1 shubhgupta shubhgupta  1017 Aug  4 17:03 authentication.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  8556 Aug  4 17:03 configuration.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  6227 Aug  4 17:03 idevid_and_iak.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 12458 Aug  4 17:03 keylime_policy.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta   156 Aug  4 17:03 revocation.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 28537 Aug  4 17:03 runtime_ima.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta 11556 Aug  4 17:03 secure_payload.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  8391 Aug  4 17:03 use_measured_boot.rst
+-rw-rw-r-- 1 shubhgupta shubhgupta  3185 Aug  4 17:03 user_selected_pcr_monitoring.rst
+
+./keylime:
+total 468
+-rw-rw-r-- 1 shubhgupta shubhgupta  1029 Aug  4 17:03 agent_installer_2.spec
+-rw-rw-r-- 1 shubhgupta shubhgupta  9927 Aug  4 17:03 agentstates.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2826 Aug  4 17:03 api_version.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 45700 Aug  4 17:03 backport_dataclasses.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  7930 Aug  4 17:03 ca_impl_openssl.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 16907 Aug  4 17:03 ca_util.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 11310 Aug  4 17:03 cert_utils.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 cli
+-rw-rw-r-- 1 shubhgupta shubhgupta 14454 Aug  4 17:03 cloud_verifier_common.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 89536 Sep 25 11:55 cloud_verifier_tornado.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 cmd
+-rw-rw-r-- 1 shubhgupta shubhgupta  2923 Aug  4 17:03 cmd_exec.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 common
+-rw-rw-r-- 1 shubhgupta shubhgupta 16289 Aug  4 17:03 config.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  7160 Aug  4 17:03 crypto.py
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 da
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 db
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 dsse
+-rw-rw-r-- 1 shubhgupta shubhgupta  8695 Aug  4 17:03 failure.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   236 Aug  4 17:03 fs_util.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 ima
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   412 Aug  4 17:03 ip_util.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2459 Aug  4 17:03 json.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2526 Aug  4 17:03 keylime_logging.py
+drwxrwxr-x 4 shubhgupta shubhgupta  4096 Aug  4 17:03 mba
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 migrations
+drwxrwxr-x 4 shubhgupta shubhgupta  4096 Aug  4 17:03 models
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 policy
+-rw-rw-r-- 1 shubhgupta shubhgupta  5226 Aug  4 17:03 registrar_client.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  3712 Aug  4 17:03 requests_client.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8590 Aug  4 17:03 revocation_notifier.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  5543 Aug  4 17:03 signing.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 83901 Aug  4 17:03 tenant.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2264 Aug  4 17:03 tornado_requests.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 tpm
+-rw-rw-r-- 1 shubhgupta shubhgupta   460 Aug  4 17:03 tpm_ek_ca.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   797 Aug  4 17:03 types.py
+drwxrwxr-x 4 shubhgupta shubhgupta  4096 Aug  4 17:03 web
+-rw-rw-r-- 1 shubhgupta shubhgupta 16995 Aug  4 17:03 web_util.py
+
+./keylime/cli:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1850 Aug  4 17:03 options.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 7781 Aug  4 17:03 policies.py
+
+./keylime/cmd:
+total 100
+-rw-rw-r-- 1 shubhgupta shubhgupta   316 Aug  4 17:03 attest.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   244 Aug  4 17:03 ca.py
+-rwxrwxr-x 1 shubhgupta shubhgupta 31408 Aug  4 17:03 convert_config.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8890 Aug  4 17:03 convert_runtime_policy.py
+-rwxrwxr-x 1 shubhgupta shubhgupta 22506 Aug  4 17:03 create_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2102 Aug  4 17:03 keylime_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2140 Aug  4 17:03 registrar.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  4036 Aug  4 17:03 sign_runtime_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   358 Aug  4 17:03 tenant.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  1488 Aug  4 17:03 user_data_encrypt.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   679 Aug  4 17:03 verifier.py
+
+./keylime/common:
+total 28
+-rw-rw-r-- 1 shubhgupta shubhgupta 2455 Aug  4 17:03 algorithms.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  442 Aug  4 17:03 exception.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  640 Aug  4 17:03 migrations.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  349 Aug  4 17:03 retry.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1866 Aug  4 17:03 states.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1721 Aug  4 17:03 validators.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  569 Aug  4 17:03 version.py
+
+./keylime/da:
+total 32
+-rw-rw-r-- 1 shubhgupta shubhgupta  6398 Aug  4 17:03 attest.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 examples
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 17250 Aug  4 17:03 record.py
+
+./keylime/da/examples:
+total 32
+-rw-rw-r-- 1 shubhgupta shubhgupta 5671 Aug  4 17:03 file.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 5225 Aug  4 17:03 redis.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1299 Aug  4 17:03 rekor.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 5374 Aug  4 17:03 sqldb.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1384 Aug  4 17:03 tsa_rfc3161.py
+
+./keylime/db:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 4012 Aug  4 17:03 keylime_db.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  996 Aug  4 17:03 registrar_db.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 3195 Aug  4 17:03 verifier_db.py
+
+./keylime/dsse:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta 3358 Aug  4 17:03 dsse.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 2170 Aug  4 17:03 ecdsa.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 4154 Aug  4 17:03 x509.py
+
+./keylime/ima:
+total 108
+-rw-rw-r-- 1 shubhgupta shubhgupta 13904 Aug  4 17:03 ast.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8283 Aug  4 17:03 dm_grammar.py
+-rwxrwxr-x 1 shubhgupta shubhgupta 19071 Aug  4 17:03 file_signatures.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 32160 Aug  4 17:03 ima_dm.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 22273 Aug  4 17:03 ima.py
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2045 Aug  4 17:03 types.py
+
+./keylime/mba:
+total 16
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 elchecking
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 elparsing
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 7451 Aug  4 17:03 mba.py
+
+./keylime/mba/elchecking:
+total 84
+-rw-rw-r-- 1 shubhgupta shubhgupta  4447 Aug  4 17:03 elchecker.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 19619 Aug  4 17:03 example.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 14364 Aug  4 17:03 example_reference_state.json
+-rw-rw-r-- 1 shubhgupta shubhgupta   361 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  1335 Aug  4 17:03 __main__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  3097 Aug  4 17:03 policies.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 24785 Aug  4 17:03 tests.py
+
+./keylime/mba/elparsing:
+total 28
+-rw-rw-r-- 1 shubhgupta shubhgupta   208 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 11546 Aug  4 17:03 tpm2_tools_elparser.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8238 Aug  4 17:03 tpm_bootlog_enrich.py
+
+./keylime/migrations:
+total 24
+-rw-rw-r-- 1 shubhgupta shubhgupta 1059 Aug  4 17:03 alembic.ini
+-rw-rw-r-- 1 shubhgupta shubhgupta 4370 Aug  4 17:03 env.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   42 Aug  4 17:03 README
+-rw-rw-r-- 1 shubhgupta shubhgupta  919 Aug  4 17:03 script.py.mako
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 versions
+
+./keylime/migrations/versions:
+total 144
+-rw-rw-r-- 1 shubhgupta shubhgupta  986 Aug  4 17:03 00766b7fd0c5_add_certs_iak_and_idevid.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  701 Aug  4 17:03 039322ea079b_add_generator_column.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  828 Aug  4 17:03 160f932fde5b_increase_length_of_verifier_ip_column.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1569 Aug  4 17:03 1ac1513ef2a1_fix_mb_and_ima_column_types.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  967 Aug  4 17:03 21b5cb88fcdb_add_idevid_and_iak.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  893 Aug  4 17:03 257fe0f0c039_add_fields_for_revocation_context_to_.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  734 Aug  4 17:03 2fbc0fb8fa4d_add_checksum_to_allowlist.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1291 Aug  4 17:03 32902c0a8d90_add_mbpolicies_table.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 3167 Aug  4 17:03 330024be7bef_convert_registrar_column_types.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  770 Aug  4 17:03 4089e1c79be9_add_tpm_clockinfo.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1368 Aug  4 17:03 4329e2d14944_associate_moved_allowlists_to_agents.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1165 Aug  4 17:03 57b24ee21dfa_extend_meta_data_field.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  841 Aug  4 17:03 63c30820fdc1_add_mtls_cert_and_ak_to_verifier_db.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1181 Aug  4 17:03 7d5db1a6ffb0_add_agentstates_columns.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 3234 Aug  4 17:03 8a44a4364f5a_initial_database_migration.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 4931 Aug  4 17:03 8c0f8ded1f90_convert_allowlists_to_ima_policies.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  797 Aug  4 17:03 8da20383f6e1_extend_ip_field.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  974 Aug  4 17:03 9169f80345ed_add_supported_version_to_verifiermain_.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1204 Aug  4 17:03 9d2f6fab52b1_associate_moved_mb_refstates_to_agents.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  745 Aug  4 17:03 a09cc94177f0_add_last_received_quote.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 2218 Aug  4 17:03 a72aec03d720_migrate_allowlists_to_separate_table.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  746 Aug  4 17:03 a79c27ec1054_add_mtls_cert_field_to_registrar.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  761 Aug  4 17:03 a7a64155ab3a_add_ima_filesigning_keys_column.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  716 Aug  4 17:03 ae898986c6e9_add_mb_refstate_column.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  980 Aug  4 17:03 b4d024197413_add_verfier_id_to_verifiermain_table.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  943 Aug  4 17:03 bc3b6b551b0a_drop_vtpm_colums.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  729 Aug  4 17:03 bf48e0c4751d_add_attestation_count_column.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  816 Aug  4 17:03 c3842cc9ee69_store_keyrings_learned_from_ima_log.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1337 Aug  4 17:03 cc2630851a1f_receive_the_aik_tpm_from_the_agent.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1177 Aug  4 17:03 eb869a77abd1_create_allowlist_table.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1159 Aug  4 17:03 eeb702f77d7d_allowlist_rename.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 1559 Aug  4 17:03 f35cdd35eb83_move_v_tpm_policy_to_jsonpickletype.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 2640 Aug  4 17:03 f4196d13fe45_migrate_mb_refstates_to_mbpolicies.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  945 Aug  4 17:03 f82c4252bc4f_add_ip_and_port_to_registrar.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  769 Aug  4 17:03 f838d3cdeead_add_last_successful_attestation.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+
+./keylime/models:
+total 12
+drwxrwxr-x 3 shubhgupta shubhgupta 4096 Aug  4 17:03 base
+-rw-rw-r-- 1 shubhgupta shubhgupta  803 Aug  4 17:03 __init__.py
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 registrar
+
+./keylime/models/base:
+total 124
+-rw-rw-r-- 1 shubhgupta shubhgupta 11686 Aug  4 17:03 associations.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 10863 Aug  4 17:03 basic_model_meta.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 22049 Aug  4 17:03 basic_model.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  1130 Aug  4 17:03 da.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  5277 Aug  4 17:03 db.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   862 Aug  4 17:03 errors.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  3387 Aug  4 17:03 field.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   839 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 15531 Aug  4 17:03 persistable_model_meta.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  9758 Aug  4 17:03 persistable_model.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  6555 Aug  4 17:03 pylint.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  9122 Aug  4 17:03 type.py
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 types
+
+./keylime/models/base/types:
+total 48
+-rw-rw-r-- 1 shubhgupta shubhgupta  4458 Aug  4 17:03 base64_bytes.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 13972 Aug  4 17:03 certificate.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  4557 Aug  4 17:03 dictionary.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   236 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8637 Aug  4 17:03 one_of.py
+
+./keylime/models/registrar:
+total 20
+-rw-rw-r-- 1 shubhgupta shubhgupta    98 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 16322 Aug  4 17:03 registrar_agent.py
+
+./keylime/policy:
+total 100
+-rw-rw-r-- 1 shubhgupta shubhgupta  9775 Aug  4 17:03 create_mb_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 38109 Aug  4 17:03 create_runtime_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 12693 Aug  4 17:03 initrd.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  2752 Aug  4 17:03 logger.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 13186 Aug  4 17:03 rpm_repo.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  6471 Aug  4 17:03 sign_runtime_policy.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  3962 Aug  4 17:03 utils.py
+
+./keylime/tpm:
+total 92
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 16260 Aug  4 17:03 tpm2_objects.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 19796 Aug  4 17:03 tpm2_objects_test.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 22457 Aug  4 17:03 tpm_main.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 20055 Aug  4 17:03 tpm_util.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  7749 Aug  4 17:03 tpm_util_test.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   325 Aug  4 17:03 types.py
+
+./keylime/web:
+total 16
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 base
+-rw-rw-r-- 1 shubhgupta shubhgupta  115 Aug  4 17:03 __init__.py
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 registrar
+-rw-rw-r-- 1 shubhgupta shubhgupta 1545 Aug  4 17:03 registrar_server.py
+
+./keylime/web/base:
+total 88
+-rw-rw-r-- 1 shubhgupta shubhgupta 16119 Aug  4 17:03 action_handler.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 22093 Aug  4 17:03 controller.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  1283 Aug  4 17:03 default_controller.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   523 Aug  4 17:03 errors.py
+-rw-rw-r-- 1 shubhgupta shubhgupta   193 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 16972 Aug  4 17:03 route.py
+-rw-rw-r-- 1 shubhgupta shubhgupta 16370 Aug  4 17:03 server.py
+
+./keylime/web/registrar:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 2428 Aug  4 17:03 agents_controller.py
+-rw-rw-r-- 1 shubhgupta shubhgupta    0 Aug  4 17:03 __init__.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  501 Aug  4 17:03 version_controller.py
+
+./Keylime Info:
+total 160
+-rw-rw-r-- 1 shubhgupta shubhgupta  6036 Aug  4 17:03 KEYLIME_ACCURACY_VERIFICATION_REPORT.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 20789 Aug  4 17:03 KEYLIME_ARCHITECTURE_DIAGRAMS.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 22238 Aug  4 17:03 KEYLIME_ATTACK_SURFACE_ANALYSIS.md
+-rw-rw-r-- 1 shubhgupta shubhgupta  9064 Aug  4 17:03 KEYLIME_ATTACK_VECTORS.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 16760 Aug  4 17:03 KEYLIME_DETAILED_WALKTHROUGH.md
+-rw-rw-r-- 1 shubhgupta shubhgupta  4941 Aug  4 17:03 KEYLIME_DOCKER_DEPLOYMENT_ANALYSIS.md
+-rw-rw-r-- 1 shubhgupta shubhgupta  9148 Aug  4 17:03 KEYLIME_DOCUMENTATION_INDEX.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 10588 Aug  4 17:03 KEYLIME_SEQUENCE_DIAGRAMS.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 11927 Aug  4 17:03 KEYLIME_SEQUENCE_DIAGRAMS_v2.md
+-rw-rw-r-- 1 shubhgupta shubhgupta 16794 Aug  4 17:03 KEYLIME_TPM_ATTACK_TREES.md
+-rw-rw-r-- 1 shubhgupta shubhgupta  6000 Aug  4 17:03 KEYLIME_VISUAL_SUMMARY.md
+
+./media:
+total 4
+drwxrwxr-x 3 shubhgupta shubhgupta 4096 Aug  4 17:03 images
+
+./media/images:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 logo
+
+./media/images/logo:
+total 240
+-rw-rw-r-- 1 shubhgupta shubhgupta  33673 Aug  4 17:03 keylime.dev-logo-text_wordmark.svg
+-rw-rw-r-- 1 shubhgupta shubhgupta 112205 Aug  4 17:03 keylime-logo_500px.png
+-rw-rw-r-- 1 shubhgupta shubhgupta  24227 Aug  4 17:03 keylime-logo.svg
+-rw-rw-r-- 1 shubhgupta shubhgupta  14704 Aug  4 17:03 keylime-logo-symbol.pdf
+-rw-rw-r-- 1 shubhgupta shubhgupta  16521 Aug  4 17:03 keylime-logo-text_wordmark.pdf
+-rw-rw-r-- 1 shubhgupta shubhgupta  30655 Aug  4 17:03 keylime-logo-text_wordmark.svg
+
+./scripts:
+total 44
+-rwxrwxr-x 1 shubhgupta shubhgupta  360 Aug  4 17:03 check_codestyle.sh
+-rwxrwxr-x 1 shubhgupta shubhgupta 6602 Aug  4 17:03 create_mb_refstate
+-rwxrwxr-x 1 shubhgupta shubhgupta 9960 Aug  4 17:03 create_runtime_policy.sh
+-rw-rw-r-- 1 shubhgupta shubhgupta  709 Aug  4 17:03 dev-clean.sh
+-rwxrwxr-x 1 shubhgupta shubhgupta 6440 Aug  4 17:03 download_packit_coverage.sh
+-rwxrwxr-x 1 shubhgupta shubhgupta 3470 Aug  4 17:03 ek-openssl-verify
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 postgres_tables
+
+./scripts/postgres_tables:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 1169 Aug  4 17:03 registrarmain.sql
+-rw-rw-r-- 1 shubhgupta shubhgupta 1666 Aug  4 17:03 verifiermain.sql
+
+./services:
+total 20
+-rwxrwxr-x 1 shubhgupta shubhgupta 1748 Aug  4 17:03 installer.sh
+-rw-rw-r-- 1 shubhgupta shubhgupta  230 Aug  4 17:03 keylime_registrar.service
+-rw-rw-r-- 1 shubhgupta shubhgupta  298 Aug  4 17:03 keylime_registrar.service.template
+-rw-rw-r-- 1 shubhgupta shubhgupta  294 Aug  4 17:03 keylime_verifier.service
+-rw-rw-r-- 1 shubhgupta shubhgupta  296 Aug  4 17:03 keylime_verifier.service.template
+
+./templates:
+total 20
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.0
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.1
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.2
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.3
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.4
+
+./templates/2.0:
+total 88
+-rw-rw-r-- 1 shubhgupta shubhgupta  8471 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  8390 Aug  4 17:03 agent.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1229 Aug  4 17:03 ca.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   788 Aug  4 17:03 logging.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 26815 Aug  4 17:03 mapping.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  5562 Aug  4 17:03 registrar.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  5613 Aug  4 17:03 tenant.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 11775 Aug  4 17:03 verifier.j2
+
+./templates/2.1:
+total 76
+-rw-rw-r-- 1 shubhgupta shubhgupta 10217 Aug  4 17:03 agent.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1229 Aug  4 17:03 ca.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   788 Aug  4 17:03 logging.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 27391 Aug  4 17:03 mapping.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  6163 Aug  4 17:03 registrar.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  5613 Aug  4 17:03 tenant.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 11775 Aug  4 17:03 verifier.j2
+
+./templates/2.2:
+total 52
+-rw-rw-r-- 1 shubhgupta shubhgupta 10987 Aug  4 17:03 agent.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1229 Aug  4 17:03 ca.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   788 Aug  4 17:03 logging.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   231 Aug  4 17:03 mapping.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  6163 Aug  4 17:03 registrar.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  5613 Aug  4 17:03 tenant.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 11775 Aug  4 17:03 verifier.j2
+
+./templates/2.3:
+total 52
+-rw-rw-r-- 1 shubhgupta shubhgupta 11503 Aug  4 17:03 agent.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1229 Aug  4 17:03 ca.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   788 Aug  4 17:03 logging.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1598 Aug  4 17:03 mapping.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  6163 Aug  4 17:03 registrar.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  5613 Aug  4 17:03 tenant.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 11928 Aug  4 17:03 verifier.j2
+
+./templates/2.4:
+total 52
+-rw-rw-r-- 1 shubhgupta shubhgupta 11941 Aug  4 17:03 agent.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  1229 Aug  4 17:03 ca.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   788 Aug  4 17:03 logging.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta   619 Aug  4 17:03 mapping.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  6820 Aug  4 17:03 registrar.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  5613 Aug  4 17:03 tenant.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 11928 Aug  4 17:03 verifier.j2
+
+./test:
+total 328
+drwxrwxr-x 22 shubhgupta shubhgupta  4096 Aug  4 17:03 data
+-rw-rw-r--  1 shubhgupta shubhgupta     0 Aug  4 17:03 __init__.py
+-rwxrwxr-x  1 shubhgupta shubhgupta  8289 Aug  4 17:03 run_tests.sh
+-rw-rw-r--  1 shubhgupta shubhgupta  1256 Aug  4 17:03 test_agentstates.py
+-rw-rw-r--  1 shubhgupta shubhgupta  4600 Aug  4 17:03 test_algorithms.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2530 Aug  4 17:03 test_api_version.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2530 Aug  4 17:03 test_ca_impl_openssl.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2922 Aug  4 17:03 test_ca_util.py
+-rw-rw-r--  1 shubhgupta shubhgupta 16813 Aug  4 17:03 test_cert_utils.py
+-rw-rw-r--  1 shubhgupta shubhgupta 10832 Aug  4 17:03 test_config.py
+-rw-rw-r--  1 shubhgupta shubhgupta 28694 Aug  4 17:03 test_convert_config.py
+-rw-rw-r--  1 shubhgupta shubhgupta 26548 Aug  4 17:03 test_create_mb_policy.py
+-rw-rw-r--  1 shubhgupta shubhgupta 41008 Aug  4 17:03 test_create_runtime_policy.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2238 Aug  4 17:03 test_crypto.py
+-rw-rw-r--  1 shubhgupta shubhgupta  1373 Aug  4 17:03 test_fs_util.py
+-rw-rw-r--  1 shubhgupta shubhgupta  4438 Aug  4 17:03 test_ima_ast.py
+-rw-rw-r--  1 shubhgupta shubhgupta 23987 Aug  4 17:03 test_ima_dm.py
+-rw-rw-r--  1 shubhgupta shubhgupta 24386 Aug  4 17:03 test_ima_verification.py
+-rw-rw-r--  1 shubhgupta shubhgupta  1026 Aug  4 17:03 test_json.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2515 Aug  4 17:03 test_mba_parsing.py
+-rw-rw-r--  1 shubhgupta shubhgupta  3012 Aug  4 17:03 test_policy_conversion.py
+-rw-rw-r--  1 shubhgupta shubhgupta  7243 Aug  4 17:03 test_registrar_db.py
+-rw-rw-r--  1 shubhgupta shubhgupta   143 Aug  4 17:03 test-requirements.txt
+-rw-rw-r--  1 shubhgupta shubhgupta   900 Aug  4 17:03 test_retry_algo.py
+-rw-rw-r--  1 shubhgupta shubhgupta  9204 Aug  4 17:03 test_rpm_repo.py
+-rw-rw-r--  1 shubhgupta shubhgupta  1418 Aug  4 17:03 test_signing.py
+-rw-rw-r--  1 shubhgupta shubhgupta  8354 Aug  4 17:03 test_sign_runtime_policy.py
+-rw-rw-r--  1 shubhgupta shubhgupta  4074 Aug  4 17:03 test_validators.py
+-rw-rw-r--  1 shubhgupta shubhgupta 12981 Aug  4 17:03 test_verifier_db.py
+-rw-rw-r--  1 shubhgupta shubhgupta   549 Aug  4 17:03 test_version.py
+-rw-rw-r--  1 shubhgupta shubhgupta  2621 Aug  4 17:03 test_web_util.py
+-rw-rw-r--  1 shubhgupta shubhgupta  1908 Aug  4 17:03 utils.py
+
+./test/data:
+total 148
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 ca
+-rw-rw-r-- 1 shubhgupta shubhgupta  1704 Aug  4 17:03 ca-private.pem
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 config
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 create-mb-policy
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 create-runtime-policy
+-rw-rw-r-- 1 shubhgupta shubhgupta  2444 Aug  4 17:03 gpg-sig.pub
+-rw-rw-r-- 1 shubhgupta shubhgupta   488 Aug  4 17:03 ima-allowlist-bad.sig
+-rw-rw-r-- 1 shubhgupta shubhgupta   683 Aug  4 17:03 ima-allowlist-short.sig
+-rw-rw-r-- 1 shubhgupta shubhgupta  1677 Aug  4 17:03 ima-allowlist-short.txt
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 ima_keys
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 mappings
+-rw-rw-r-- 1 shubhgupta shubhgupta 25662 Aug  4 17:03 mb_log.b64
+-rw-rw-r-- 1 shubhgupta shubhgupta   178 Aug  4 17:03 runtime-policy-pubkey.pub
+-rw-rw-r-- 1 shubhgupta shubhgupta  2078 Aug  4 17:03 runtime-policy-test.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  3036 Aug  4 17:03 runtime-policy-test-signed-bad.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  3036 Aug  4 17:03 runtime-policy-test-signed.json
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 sign-runtime-policy
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 template-adjust-exception
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 template-invalid-adjust
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 template-no-adjust
+drwxrwxr-x 5 shubhgupta shubhgupta  4096 Aug  4 17:03 templates
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-invalid-mapping-type
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-invalid-mapping-version
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-add
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-corner-cases
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-missing-default
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-missing-option
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-missing-section
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-remove
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 templates-update-replace
+-rw-rw-r-- 1 shubhgupta shubhgupta   190 Aug  4 17:03 template-with-quotes.j2
+
+./test/data/ca:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 1367 Aug  4 17:03 cacert.crt
+
+./test/data/config:
+total 44
+-rw-rw-r-- 1 shubhgupta shubhgupta   90 Aug  4 17:03 comp1.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta  105 Aug  4 17:03 comp1_exist.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   96 Aug  4 17:03 comp1_old.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta  112 Aug  4 17:03 comp1.toml
+-rw-rw-r-- 1 shubhgupta shubhgupta  104 Aug  4 17:03 comp2.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   96 Aug  4 17:03 comp2_old.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   33 Aug  4 17:03 keylime-1.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   32 Aug  4 17:03 keylime-2.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   57 Aug  4 17:03 keylime-3.conf
+-rw-rw-r-- 1 shubhgupta shubhgupta   83 Aug  4 17:03 verifier.conf
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 verifier.conf.d
+
+./test/data/config/verifier.conf.d:
+total 8
+-rw-rw-r-- 1 shubhgupta shubhgupta 34 Aug  4 17:03 001-value2
+-rw-rw-r-- 1 shubhgupta shubhgupta 58 Aug  4 17:03 002-value3
+
+./test/data/create-mb-policy:
+total 96
+-rw-rw-r-- 1 shubhgupta shubhgupta 49088 Aug  4 17:03 binary_bios_measurements
+-rw-rw-r-- 1 shubhgupta shubhgupta    34 Aug  4 17:03 binary_bios_measurements-bogus
+-rw-rw-r-- 1 shubhgupta shubhgupta     0 Aug  4 17:03 binary_bios_measurements-empty
+-rw-rw-r-- 1 shubhgupta shubhgupta 41371 Aug  4 17:03 binary_bios_measurements-secureboot
+
+./test/data/create-runtime-policy:
+total 96
+-rw-rw-r-- 1 shubhgupta shubhgupta    47 Aug  4 17:03 allowlist-sha1
+-rw-rw-r-- 1 shubhgupta shubhgupta    71 Aug  4 17:03 allowlist-sha256
+-rw-rw-r-- 1 shubhgupta shubhgupta   103 Aug  4 17:03 allowlist-sha384
+-rw-rw-r-- 1 shubhgupta shubhgupta   135 Aug  4 17:03 allowlist-sha512
+-rw-rw-r-- 1 shubhgupta shubhgupta    70 Aug  4 17:03 allowlist-sm3_256
+-rw-rw-r-- 1 shubhgupta shubhgupta    39 Aug  4 17:03 allowlist-unknown
+-rw-rw-r-- 1 shubhgupta shubhgupta   215 Aug  4 17:03 ima-log-sha1
+-rw-rw-r-- 1 shubhgupta shubhgupta   267 Aug  4 17:03 ima-log-sha256
+-rw-rw-r-- 1 shubhgupta shubhgupta   331 Aug  4 17:03 ima-log-sha384
+-rw-rw-r-- 1 shubhgupta shubhgupta   395 Aug  4 17:03 ima-log-sha512
+-rw-rw-r-- 1 shubhgupta shubhgupta   317 Aug  4 17:03 ima-log-sm3_256
+-rw-rw-r-- 1 shubhgupta shubhgupta   305 Aug  4 17:03 ima-log-unknown
+-rw-rw-r-- 1 shubhgupta shubhgupta   326 Aug  4 17:03 policy-sha1
+-rw-rw-r-- 1 shubhgupta shubhgupta   350 Aug  4 17:03 policy-sha256
+-rw-rw-r-- 1 shubhgupta shubhgupta   382 Aug  4 17:03 policy-sha384
+-rw-rw-r-- 1 shubhgupta shubhgupta   414 Aug  4 17:03 policy-sha512
+-rw-rw-r-- 1 shubhgupta shubhgupta   344 Aug  4 17:03 policy-sm3_256
+-rw-rw-r-- 1 shubhgupta shubhgupta   343 Aug  4 17:03 policy-unknown
+drwxrwxr-x 2 shubhgupta shubhgupta  4096 Aug  4 17:03 rootfs
+-rwxrwxr-x 1 shubhgupta shubhgupta  5077 Aug  4 17:03 setup-initrd-tests
+-rwxrwxr-x 1 shubhgupta shubhgupta 10823 Aug  4 17:03 setup-rpm-tests
+
+./test/data/create-runtime-policy/rootfs:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 34 Aug  4 17:03 rootfs_data
+
+./test/data/ima_keys:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta 1679 Aug  4 17:03 rsa2048.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  451 Aug  4 17:03 rsa2048pub.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  294 Aug  4 17:03 secp256k1.pem
+
+./test/data/mappings:
+total 20
+-rw-rw-r-- 1 shubhgupta shubhgupta 1492 Aug  4 17:03 invalid-component-version.json
+-rw-rw-r-- 1 shubhgupta shubhgupta   79 Aug  4 17:03 invalid-version.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  112 Aug  4 17:03 no-components.json
+-rw-rw-r-- 1 shubhgupta shubhgupta   50 Aug  4 17:03 no-version.json
+-rw-rw-r-- 1 shubhgupta shubhgupta 1641 Aug  4 17:03 sanity.json
+
+./test/data/sign-runtime-policy:
+total 24
+-rw-rw-r-- 1 shubhgupta shubhgupta  365 Aug  4 17:03 ec-p521-private.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  268 Aug  4 17:03 ec-p521-public.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 3272 Aug  4 17:03 rsa-4096-private.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta    5 Aug  4 17:03 runtime-policy-bogus.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  261 Aug  4 17:03 runtime-policy-empty.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  917 Aug  4 17:03 runtime-policy.json
+
+./test/data/template-adjust-exception:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.0
+
+./test/data/template-adjust-exception/2.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta  302 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1492 Aug  4 17:03 mapping.json
+
+./test/data/template-invalid-adjust:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.0
+
+./test/data/template-invalid-adjust/2.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta   92 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1492 Aug  4 17:03 mapping.json
+
+./test/data/template-no-adjust:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.0
+
+./test/data/template-no-adjust/2.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta  200 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1492 Aug  4 17:03 mapping.json
+
+./test/data/templates:
+total 12
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 1.0
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 2.0
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.0
+
+./test/data/templates/1.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta  296 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  214 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1800 Aug  4 17:03 mapping.json
+
+./test/data/templates/2.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta  296 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  182 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1800 Aug  4 17:03 mapping.json
+
+./test/data/templates/3.0:
+total 16
+-rw-rw-r-- 1 shubhgupta shubhgupta  337 Aug  4 17:03 adjust.py
+-rw-rw-r-- 1 shubhgupta shubhgupta  220 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  220 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1800 Aug  4 17:03 mapping.json
+
+./test/data/templates-invalid-mapping-type:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-invalid-mapping-type/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 110 Aug  4 17:03 mapping.json
+
+./test/data/templates-invalid-mapping-version:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-invalid-mapping-version/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 116 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-add:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-add/3.1:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta 305 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 305 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 594 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-corner-cases:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-corner-cases/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 824 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-missing-default:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-missing-default/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 278 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-missing-option:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-missing-option/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 274 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-missing-section:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-missing-section/3.1:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 278 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-remove:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-remove/3.1:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta 220 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 220 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 359 Aug  4 17:03 mapping.json
+
+./test/data/templates-update-replace:
+total 4
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 3.1
+
+./test/data/templates-update-replace/3.1:
+total 12
+-rw-rw-r-- 1 shubhgupta shubhgupta  297 Aug  4 17:03 comp1.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta  297 Aug  4 17:03 comp2.j2
+-rw-rw-r-- 1 shubhgupta shubhgupta 1077 Aug  4 17:03 mapping.json
+
+./test-data:
+total 88
+-rw-rw-r-- 1 shubhgupta shubhgupta 85594 Aug  4 17:03 emulator-inputs.txt
+drwxrwxr-x 3 shubhgupta shubhgupta  4096 Aug  4 17:03 files
+
+./test-data/files:
+total 80
+-rwxrwxr-x 1 shubhgupta shubhgupta    9 Aug  4 17:03 actcred.out
+-rwxrwxr-x 1 shubhgupta shubhgupta   34 Aug  4 17:03 ak.name
+-rwxrwxr-x 1 shubhgupta shubhgupta  282 Aug  4 17:03 ak.pub
+-rwxrwxr-x 1 shubhgupta shubhgupta  451 Aug  4 17:03 akpub.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  215 Aug  4 17:03 allowlist-ec-key.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  103 Aug  4 17:03 allowlist-ec-sig.bin
+-rw-rw-r-- 1 shubhgupta shubhgupta   31 Aug  4 17:03 allowlist-invalid-sig.sig
+-rw-rw-r-- 1 shubhgupta shubhgupta   77 Aug  4 17:03 allowlist.json
+-rw-rw-r-- 1 shubhgupta shubhgupta  664 Aug  4 17:03 allowlist-pgp-key.pgp
+-rw-rw-r-- 1 shubhgupta shubhgupta  119 Aug  4 17:03 allowlist-pgp-sig.sig
+-rwxrwxr-x 1 shubhgupta shubhgupta  316 Aug  4 17:03 ek.pub
+-rwxrwxr-x 1 shubhgupta shubhgupta  451 Aug  4 17:03 ekpub.pem
+drwxrwxr-x 2 shubhgupta shubhgupta 4096 Aug  4 17:03 idevid-test-ca
+-rwxrwxr-x 1 shubhgupta shubhgupta  313 Aug  4 17:03 mkcred.out
+-rwxrwxr-x 1 shubhgupta shubhgupta   32 Aug  4 17:03 nv.data
+-rwxrwxr-x 1 shubhgupta shubhgupta  133 Aug  4 17:03 quote.out
+-rwxrwxr-x 1 shubhgupta shubhgupta  668 Aug  4 17:03 quotepcr.out
+-rwxrwxr-x 1 shubhgupta shubhgupta  262 Aug  4 17:03 quotesig.out
+-rwxrwxr-x 1 shubhgupta shubhgupta   20 Aug  4 17:03 rand.out
+-rwxrwxr-x 1 shubhgupta shubhgupta    9 Aug  4 17:03 secret.data
+
+./test-data/files/idevid-test-ca:
+total 4
+-rw-rw-r-- 1 shubhgupta shubhgupta 4090 Aug  4 17:03 iak_idevid_chain.pem
+
+./tpm_cert_store:
+total 208
+-rw-rw-r-- 1 shubhgupta shubhgupta 5044 Aug  4 17:03 Alibaba_Cloud_vTPM_EK.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1390 Aug  4 17:03 GS_TPM_RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX15.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX1.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX2.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX3.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX4.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX5.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX8.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1200 Aug  4 17:03 IFX_ECC_034.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1180 Aug  4 17:03 IFX_ECC_042.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_01I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_02I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2037 Aug  4 17:03 IFX_RSA_034.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_03I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2017 Aug  4 17:03 IFX_RSA_042.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_04I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_05I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_08I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1496 Aug  4 17:03 IFX_RSA_17I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_18I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1662 Aug  4 17:03 IFX_RSA_20I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1496 Aug  4 17:03 IFX_RSA_21I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1557 Aug  4 17:03 IFX_RSA_RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1195 Aug  4 17:03 INF_ECC_010I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  878 Aug  4 17:03 INF_ECC_010RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1199 Aug  4 17:03 INF_ECC_011.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2036 Aug  4 17:03 INF_RSA_010I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2024 Aug  4 17:03 INF_RSA_010RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2036 Aug  4 17:03 INF_RSA_011.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 2036 Aug  4 17:03 INF_RSA_022.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1358 Aug  4 17:03 INTEL_I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  915 Aug  4 17:03 INTEL_RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 3450 Aug  4 17:03 Nationz_TPM_EK.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1199 Aug  4 17:03 NTC1.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1199 Aug  4 17:03 NTC2.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  764 Aug  4 17:03 NUVO_0100.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  760 Aug  4 17:03 NUVO_1110.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  765 Aug  4 17:03 NUVO_1111.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  760 Aug  4 17:03 NUVO_2110.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  764 Aug  4 17:03 NUVO_2111.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta  890 Aug  4 17:03 STM_ECC_01I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1024 Aug  4 17:03 STM_ECC_01RT.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1378 Aug  4 17:03 STM_RSA_01I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1378 Aug  4 17:03 STM_RSA_02I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1378 Aug  4 17:03 STM_RSA_03I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1378 Aug  4 17:03 STM_RSA_04I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1378 Aug  4 17:03 STM_RSA_05I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1379 Aug  4 17:03 STM_RSA_06I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1379 Aug  4 17:03 STM_RSA_07I.pem
+-rw-rw-r-- 1 shubhgupta shubhgupta 1463 Aug  4 17:03 STM_RSA_RT.pem
